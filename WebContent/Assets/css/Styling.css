@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+/*Header Content*/
+
+.header_body{
+	margin : 0px;
+	display: grid;
+}
+
+.header_div {
+	background-color: #dcc1d5;
+    height: 12%;
+    position: fixed;
+    width: 100%;
+}
+
+.header_table td {
+	padding : 14px 10px 16px 47px;
+	width : 100px;
+	border: solid;
+	height : 5%;
+}
+
+.page_body {	
+	margin-top: 5.6%;
+    background-color: aliceblue;
+    position: fixed;
+    width: 100%;
+    height: 178%;
+}
