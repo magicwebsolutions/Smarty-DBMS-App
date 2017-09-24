@@ -12,12 +12,9 @@ public class LoginDAO {
 			Connection conn = dbConnection.DbConnection.getConnection();
 			PreparedStatement psmt = null;
 			ResultSet rSet=null;
-		System.out.println("Entering validate user hashmap values---->"+l_Map);
 		if(l_Map.get("flag").equals("Mainlogin"))
-		{
-		System.out.println("Entering Main login validation---->"+l_Map);
-		
-		Loginquery = "SELECT COUNT(*)as count FROM user_table WHERE USER_NAME= ? AND PASSWORD = ?";
+		{		
+		Loginquery = "SELECT COUNT(*)as count FROM login_master WHERE Username= ? AND Password = ?";
 		psmt=conn.prepareStatement(Loginquery);
 		psmt.setString(1,(String)l_Map.get("USER_NAME") );
 		psmt.setString(2,(String)l_Map.get("USER_PWD") );

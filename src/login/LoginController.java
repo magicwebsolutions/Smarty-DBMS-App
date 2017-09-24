@@ -38,7 +38,6 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("Gouthamaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaam");
 		String validation_Status ="FALSE";
 		String UserName=null;
 		String Password=null;
@@ -49,11 +48,8 @@ public class LoginController extends HttpServlet {
 		if(request.getParameter("UserName")!=null && request.getParameter("UserName")!="" && request.getParameter("User_pwd")!=null
 			&& request.getParameter("User_pwd")!="")
 		{
-			System.out.println(request.getParameter("hint"));
 			UserName= request.getParameter("UserName");
-			System.out.println("USERNAME-->"+UserName);
 			Password = request.getParameter("User_pwd");
-			System.out.println("Password-->"+Password);
 			h_map = new HashMap();
 			h_map.put("flag", "Mainlogin");
 			h_map.put("USER_NAME",UserName);
@@ -61,13 +57,9 @@ public class LoginController extends HttpServlet {
 		}
 		else
 		{
-			System.out.println("Enter sublogin ");
 			Hint= request.getParameter("hint");
-			System.out.println("Hint-->"+Hint);
 			Password= request.getParameter("User_pwd1");
-			System.out.println("Password-->"+Password);
 			Repassword = request.getParameter("User_pwd2");
-			System.out.println("Repassword-->"+Repassword);
 			h_map = new HashMap();
 			h_map.put("flag", "Sublogin");
 			h_map.put("Hint", Hint);
@@ -81,7 +73,7 @@ public class LoginController extends HttpServlet {
 		if(validation_Status=="TRUE"){
 			System.out.println("Login successfull for user "+UserName);
 			request.setAttribute("status", "success");
-			request.getRequestDispatcher("Login.jsp").forward(request, response);
+			request.getRequestDispatcher("/JSP_Pages/Login.jsp").forward(request, response);
 
 		}
 			else if(validation_Status=="wronghint"){

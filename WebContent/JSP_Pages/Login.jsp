@@ -26,10 +26,7 @@
             <form action = "/Smarty-DBMS-PROD/Login" id="loginForm" method="POST">
                 <div class="form-row">
                     <div class="form-inner-field input-field">
-                        <!-- <input for="full_name" type="text" id="UserName" name="UserName" class="validate" 
-                        onkeypress=logincredenChange('uname') onKeyUp = logincredenChange('uname')  autofocus autocomplete="off">-->
-                        
-                        <input for="full_name" type="text" id="UserName" name="UserName" class="validate" autofocus autocomplete="off">
+                      <input for="full_name" type="text" id="UserName" name="UserName" class="validate" autofocus autocomplete="off">
                         <label id="full_name">User Name</label>
                     </div>
                     <p class="form-error fade-in" id="alertUserName" style="margin-right: 148px;">*Please Enter UserName</p>
@@ -37,9 +34,6 @@
                 <div class="form-row">
                     <div class="form-inner-field input-field">
                         <input type="password" id="User_pwd" name="User_pwd" class="validate"  autocomplete="off">
-                        
-                        <!--  <input type="password" id="User_pwd" name="User_pwd" class="validate"
-                        onkeypress=logincredenChange("pwd") onKeyUp = logincredenChange("pwd") autocomplete="off"> -->
                         <label>Password</label>
                     </div>
                     <p class="form-error fade-in" id="alertPassword" style="margin-right: 148px;">*Please Enter Password</p>
@@ -52,5 +46,16 @@
 <script src="Assets/Js/jquery-3.1.1.min.js"></script>
 <script src="Assets/Js/ripple.min.js"></script>
 <script src="Assets/Js/materialize.min.js"></script> 
+
+<%
+if((String)request.getAttribute("status")=="success")
+{
+	%>
+	<script>    
+    DashboardRedirect();
+    </script>
+<%
+}
+%>
 </body>
 </html>
