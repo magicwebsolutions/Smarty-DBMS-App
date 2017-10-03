@@ -5,11 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<script type="text/javascript" src="../JS_Files/Credit_To_Customer.js"></script>
 </head>
 <body>
 </body>
 <%@ include file = "Header.jsp" %>
 <div class="page_body">
 	<h1>Credit to Customer Content should Go Here</h1>
+	<button onclick="Hello()"> hello
+	</button>
 </div>
 </html>

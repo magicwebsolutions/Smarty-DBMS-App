@@ -8,8 +8,17 @@
 </head>
 <body>
 <%@ include file = "Header.jsp" %>
-<div class="page_body">
-	<h1>Settings Content should Go Here</h1>
+<div class="Maincontainer" style="background-color: red;margin-top: 51px;">
+<nav class="innerNavigation navbar-default">
+		 <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Customers</a></li>
+                <li><a href="#">Customer Types</a></li>
+                <li><a href="#">Items</a></li>
+				<li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+</nav>
 </div>
 </body>
 </html>

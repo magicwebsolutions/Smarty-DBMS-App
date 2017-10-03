@@ -9,6 +9,5 @@ function LoginOnLoad(){
 }
 
 function DashboardRedirect(){	
-	alert("Login :Success");
 	window.open("JSP_Pages/Dashboard.jsp","_self");
 }

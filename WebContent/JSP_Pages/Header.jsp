@@ -1,26 +1,113 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<link rel="stylesheet" type="text/css" href="../Assets/css/Styling.css">
-<body class="header_body">
-	<div class="header_div">
-		<table class="header_table">
-			<tr>
-				<td>Logo</td>
-				<td onclick='window.open("Dashboard.jsp","_self")'>Dashboard</td>
-				<td onclick='window.open("Stocks.jsp","_self")'>Stocks</td>
-				<td onclick='window.open("Credit_To_Customer.jsp","_self")'>Credit To Customer</td>
-				<td onclick='window.open("Debit_From_Customer.jsp","_self")'>Debit From Customer</td>
-				<td onclick='window.open("Reports.jsp","_self")'>Reports</td>
-				<td onclick='window.open("Settings.jsp","_self")'>Settings</td>
-				<td onclick='window.open("Login.jsp","_self")'> Logout </td>
-			</tr>
-		</table>
-	</div>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <link rel="stylesheet" href="<%=request.getContextPath()%>/Assets/css/bootstrap.minv3.3.7.css">
+ <script src="<%=request.getContextPath()%>/Assets/Js/jquery.min.js"></script>
+ <script src="<%=request.getContextPath()%>/Assets/Js/bootstrap.min.js"></script>	
+ <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/Assets/css/Styling.css">
+ </head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img class = "logoStyle" src ="<%=request.getContextPath()%>/Assets/Images/Smarty_DBMS_Logo.png"/></a>
+    </div>
+    <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <!--<button type="submit" class="btn btn-default">Submit</button>-->
+    </form>
+  </div>
+</nav>
+
+<div>
+  <div class="navbar-fixed-left">
+	  <ul class="nav navbar-nav">
+	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Dashboard.png"/></center><div>Dashboard</div></li>
+	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Inventory.png"/></center><div>Stock In/Out</div></li>
+	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Billing.png"/></center><div>Credit/Debit</div></li>
+	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/settings.png"/></center><div>Settings</div></li>
+	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Dashboard.png"/></center><div>Dashboard</div></li>
+	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Inventory.png"/></center><div>Stock In/Out</div></li>
+	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Billing.png"/></center><div>Credit/Debit</div></li>
+	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/settings.png"/></center><div>Settings</div></li>
+	  </ul>
+</div>
+</div>
 </body>
+<style>
+
+.logoStyle {
+height: 42px;
+width: 102px;
+margin-top: -13px;
+}
+
+.navbar-form .form-control {
+    display: inline-block;
+    width: 500px;
+    vertical-align: middle;
+    margin-left: 295px;
+}
+
+.navbar {
+    border-radius: 0px;
+	overflow: hidden;
+    //background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+
+.navbar-fixed-left {
+  width: 56px;
+  position: fixed;
+  height: 100%;
+  top: 51px;
+  background-color: #94b0c3;
+  border-color: #94b0c3;
+  z-index: 1;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  width: 55px;
+  margin-bottom: 34px;
+  top: 20px;
+}
+
+
+.navbar-fixed-left .navbar-nav li div {
+    background-color: #94b0c3;    
+    position: absolute;
+	margin-left: 55px;
+    margin-top: -33px;
+    border-radius: 0px 5px 5px 0px;
+    color: white;
+    height: 38px;
+    width: 100px;
+    padding: 8px;
+	display: none;
+}
+
+.navbar-fixed-left .navbar-nav li:hover div{
+	 display: block;
+}
+
+.sideMenuIcons {
+    height: 30px;
+    width: 27px;
+}
+
+</style>
+
+
+
 </html>
