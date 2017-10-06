@@ -1,3 +1,5 @@
+var data = [];
+
 function ListCustomers()
 {	
 var URL = gloablContextURL+"/ListCustomer?Event=LISTCUSTOMER";
@@ -8,7 +10,6 @@ requestOBJ = new XMLHttpRequest();
 }
 try{
 requestOBJ.onreadystatechange=CustomerResponse;
-alert(URL);
 requestOBJ.open("POST",URL,true);
 requestOBJ.setRequestHeader("Content-type", "text/xml");
 requestOBJ.send();
@@ -18,15 +19,50 @@ alert("Something went wrong");
 
 }
 function CustomerResponse(){
-	alert("11111111111111111");
+	var singleGrid;
+	var itemarray;
 if(requestOBJ.readyState==4){
-	alert("22222222222222222");
 if(requestOBJ.status==200){
-	alert("3333333333333333333");
 var responsetext= requestOBJ.responseText;
-alert(responsetext);
 responsetext= responsetext.replace("<xml>","");
-responsetext= responsetext.replace("<xml>","");      
+if(responsetext.indexOf("~")>0){
+	var finalResponse = responsetext.substring(0, responsetext.lastIndexOf('#'));
+	itemarray = finalResponse.split("#");
+	for(var i=0; i<itemarray.length;i++){
+		data.push(itemarray[i].split('~'));
+		debugger;
+	}
+	data;	
+	console.log(data);
+	debugger;
+	var dataSet = data;
+	
+	console.log(dataSet);
+	
+	
+	$(document).ready(function() {
+		$('#example').DataTable( {
+	        data: dataSet,
+	        columns: [
+	        	 { title: "Customer ID" },
+	             { title: "Name" },
+	             { title: "Phone" },
+	             { title: "Address" }
+	        ]
+	    } );
+		
+		
+	} );
+	
 }
 }
 }
+}
+
+
+
+
+
+
+
+

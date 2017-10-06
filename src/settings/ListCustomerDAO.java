@@ -32,7 +32,7 @@ public class ListCustomerDAO {
 				Unit_Buffer.append(rSet.getString("Cust_Phone"));
 				Unit_Buffer.append("~");
 				Unit_Buffer.append(rSet.getString("Cust_Address"));
-				Unit_Buffer.append("$");		
+				Unit_Buffer.append("#");		
 			}
 			
 			
