@@ -6,8 +6,11 @@
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
  
- <link rel="stylesheet" href="<%=request.getContextPath()%>/Assets/css/bootstrap.minv3.3.7.css">
- <script src="<%=request.getContextPath()%>/Assets/Js/jquery.min.js"></script>
+ <link rel="stylesheet" href="<%=request.getContextPath()%>/Assets/css/bootstrap.minv3.3.7.css"> 
+ <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ 
+
+ 
  <script src="<%=request.getContextPath()%>/Assets/Js/bootstrap.min.js"></script>	
  <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/Assets/css/Styling.css">
  </head>
@@ -30,10 +33,10 @@
 <div>
   <div class="navbar-fixed-left">
 	  <ul class="nav navbar-nav">
-	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Dashboard.png"/></center><div>Dashboard</div></li>
+	   <li onclick="navigation('DASHBOARD');"><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Dashboard.png"/></center><div>Dashboard</div></li>
 	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Inventory.png"/></center><div>Stock In/Out</div></li>
 	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Billing.png"/></center><div>Credit/Debit</div></li>
-	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/settings.png"/></center><div>Settings</div></li>
+	   <li onclick="navigation('SETTINGS');"><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/settings.png"/></center><div>Settings</div></li>
 	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Dashboard.png"/></center><div>Dashboard</div></li>
 	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Inventory.png"/></center><div>Stock In/Out</div></li>
 	   <li><center><img class = "sideMenuIcons" src="<%=request.getContextPath()%>/Assets/Images/MenuIcons/Billing.png"/></center><div>Credit/Debit</div></li>
@@ -42,6 +45,15 @@
 </div>
 </div>
 </body>
+
+<script>
+function navigation(screenType){
+	
+	if(screenType == 'SETTINGS') {window.open("<%=request.getContextPath()%>/JSP_Pages/Settings.jsp","_self")};
+	if(screenType == 'DASHBOARD') {window.open("<%=request.getContextPath()%>/JSP_Pages/Dashboard.jsp","_self")};
+
+}
+</script>
 <style>
 
 .logoStyle {
